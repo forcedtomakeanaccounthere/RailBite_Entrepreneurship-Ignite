@@ -15,6 +15,18 @@ export const BrandStory = () => {
               <p>
                 RailBite was created to solve this. We're building a network of outlets at railway stations, offering wholesome Indian meals with clear prices, convenient ordering, and reliable quality.
               </p>
+              
+              <div className="grid grid-cols-2 gap-4 my-8">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                  <div className="text-3xl font-bold mb-1">24/7</div>
+                  <div className="text-sm text-white/80">Open at select stations to serve early morning and late-night travelers</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                  <div className="text-3xl font-bold mb-1">100%</div>
+                  <div className="text-sm text-white/80">Hygienic dine-in at every outlet — familiar, reliable, good to go</div>
+                </div>
+              </div>
+              
               <p className="font-semibold text-xl">Because every journey deserves good food.</p>
             </div>
           </div>

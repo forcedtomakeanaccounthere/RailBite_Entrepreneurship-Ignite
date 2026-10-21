@@ -10,6 +10,7 @@ export const SeatDelivery = () => {
     pnr: '',
     seat: '',
     station: '',
+    stationCode: '',
     date: '',
     deliveryTime: '',
   });
@@ -135,7 +136,7 @@ export const SeatDelivery = () => {
   }
 
   return (
-    <div className="bg-cream rounded-3xl p-8">
+    <div className="bg-white rounded-3xl p-8">
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
         <p className="text-sm text-blue-900">
           <AlertCircle size={16} className="inline mr-1" />
@@ -230,16 +231,29 @@ export const SeatDelivery = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-charcoal mb-2">Journey date</label>
+              <label className="block text-sm font-medium text-charcoal mb-2">Station Code</label>
               <input
-                type="date"
+                type="text"
                 required
-                value={formData.date}
-                onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                min={new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-railway-red focus:border-transparent"
+                placeholder="e.g., NGP"
+                maxLength={5}
+                value={formData.stationCode || ''}
+                onChange={(e) => setFormData({ ...formData, stationCode: e.target.value.toUpperCase() })}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-railway-red focus:border-transparent uppercase"
               />
             </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-charcoal mb-2">Journey date</label>
+            <input
+              type="date"
+              required
+              value={formData.date}
+              onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+              min={new Date().toISOString().split('T')[0]}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-railway-red focus:border-transparent"
+            />
           </div>
 
           <div>

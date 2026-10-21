@@ -56,7 +56,7 @@ export const DineInBooking = () => {
   }
 
   return (
-    <div className="bg-cream rounded-3xl p-8">
+    <div className="bg-white rounded-3xl p-8">
       <h3 className="font-bold text-2xl text-charcoal mb-6">Reserve a table</h3>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>

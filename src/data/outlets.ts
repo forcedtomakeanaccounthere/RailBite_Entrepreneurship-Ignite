@@ -7,7 +7,7 @@ export const outlets: Outlet[] = [
     city: 'Nagpur',
     station: 'Nagpur Junction',
     address: 'Platform 1, Nagpur Railway Station',
-    hours: '6:00 AM - 11:00 PM',
+    hours: '24 Hours',
     hasDineIn: true,
     hasTakeaway: true,
     phone: 'Demo outlet',

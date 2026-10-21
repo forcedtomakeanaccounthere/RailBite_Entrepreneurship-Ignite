@@ -14,6 +14,8 @@ import { OutletFinder } from './components/OutletFinder';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
+import { ScrollToTop } from './components/ScrollToTop';
+import { DotNavigation } from './components/DotNavigation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,13 +54,24 @@ function App() {
   return (
     <div className="relative">
       <Navbar onCartClick={() => setCartOpen(true)} />
-      <Hero />
+      <DotNavigation />
+      <div id="hero">
+        <Hero />
+      </div>
       <ProblemSection />
-      <OutletFinder />
-      <MenuExplorer />
+      <div id="outlets">
+        <OutletFinder />
+      </div>
+      <div id="menu">
+        <MenuExplorer />
+      </div>
       <HowItWorks />
-      <ServicesSection />
-      <PromiseSection />
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div id="promise">
+        <PromiseSection />
+      </div>
       <BrandStory />
       <FAQ />
       <Footer />
@@ -67,6 +80,7 @@ function App() {
         onClose={() => setCartOpen(false)}
         onCheckout={handleCheckout}
       />
+      <ScrollToTop />
     </div>
   );
 }

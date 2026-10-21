@@ -101,7 +101,7 @@ export const PickupOrder = () => {
   }
 
   return (
-    <div className="bg-cream rounded-3xl p-8">
+    <div className="bg-white rounded-3xl p-8">
       <h3 className="font-bold text-2xl text-charcoal mb-6">Order for pickup</h3>
 
       {cart.length === 0 ? (

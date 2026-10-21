@@ -112,6 +112,7 @@ export const Footer = () => {
             RailBite is a concept prototype. Locations, availability, prices, and order statuses shown are illustrative.
           </p>
         </div>
+        </div>
       </footer>
     </>
   );

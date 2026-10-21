@@ -82,9 +82,14 @@ export const OutletFinder = () => {
                   <MapPin size={16} className="mr-2 mt-0.5 flex-shrink-0" />
                   <span>{outlet.address}</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
+                <div className="flex items-center text-sm">
                   <Clock size={16} className="mr-2 flex-shrink-0" />
-                  <span>{outlet.hours}</span>
+                  <span className={outlet.hours === '24 Hours' ? 'text-green-600 font-semibold' : 'text-gray-600'}>
+                    {outlet.hours}
+                    {outlet.hours === '24 Hours' && (
+                      <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Open 24/7</span>
+                    )}
+                  </span>
                 </div>
               </div>
 
